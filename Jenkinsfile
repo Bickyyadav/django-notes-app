@@ -39,7 +39,7 @@ pipeline {
                
             }
         }
-        stage("Code") {
+      stage("Code") {
             steps {
                 echo "Cloning the project"
                 git url: "https://github.com/Bickyyadav/django-notes-app.git", branch: "main"
@@ -48,7 +48,7 @@ pipeline {
         stage("Build") {
             steps {
                 echo "Building the project"
-                sh "docker build -t node-app:latest ."
+                sh "docker  build -t node-app:latest ."
                 echo "Docker build completed successfully"
             }
         }
